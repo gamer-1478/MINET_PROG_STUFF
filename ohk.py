@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(60000000)
+sys.setrecursionlimit(600000000)
 negative = []
 lock = []
 boost = False
@@ -29,11 +29,11 @@ graph = {
     "AG1" : [("r", "AG2"), ("l", "Automatic Guns")],
     "AG2" : [("r", "AG3"), ("l", "AG1")],
     "AG3" : [("r", "Solar Panel"), ("l", "AG2")],
-    "Solar Panel" : [ ("d", "SPD"),("r", "SPR1"), ("l", "AG3")],
+    "Solar Panel" : [ ("r", "SPR1"),("d", "SPD"), ("l", "AG3")],
     "SPR1" : [ ("r", "SPR2"), ("l", "Solar Panel"),],
     "SPR2" : [ ("d", "KU"), ("l", "SPR1")],
     "KU" : [("u", "SPR2"), ("d", "Key")],
-    "Key" : [("u", "KU"), ("d", "KL1"), ("l", "KD1")],
+    "Key" : [("u", "KU"), ("d", "KD1"), ("l", "KL1")],
     "KD1" : [("u", "Key"), ("d", "KD2")],
     "KD2" : [("u", "KD1"), ("d", "KD3")],
     "KD3" : [("u", "KD2"), ("d", "KD4")],
